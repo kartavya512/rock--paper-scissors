@@ -16,27 +16,27 @@ const Pick = ({setScore,score}) => {
   }
 
   return (
-    <div className="items-center pt-28">
-      <div className="absolute -z-2 ">
+    <div className="items-center lg:pt-28 pt-32">
+      <div className="ml-12 lg:ml-0 absolute -z-2 lg:w-full w-[75%] ">
         <Image src={triangle} />
       </div>
       <div
         onClick={() => setSelect(1)}
-        className=" bg-white z-10 relative w-40 items-center justify-center flex  rounded-full h-40 border-[11px] border-blue-700  -mt-20 -ml-[4rem]"
+        className=" bg-white z-10 relative lg:w-40 w-32 h-32 items-center justify-center flex  rounded-full lg:h-40 border-[11px] border-blue-700  lg:-mt-20 -mt-16 lg:-ml-[4rem] "
       >
         <Image className="" src={paper}></Image>
       </div>
 
       <div
         onClick={() => setSelect(2)}
-        className="bg-white w-40 z-10 relative items-center justify-center flex  rounded-full h-40 border-[11px] border-yellow-500 -mt-[10rem] ml-[14rem]"
+        className="bg-white lg:w-40 w-32 h-32 z-10 relative items-center justify-center flex  rounded-full lg:h-40 border-[11px] border-yellow-500 lg:-mt-[10rem] -mt-[8rem] ml-[14rem] "
       >
         <Image className="" src={scisscors}></Image>
       </div>
 
       <div
         onClick={() => setSelect(3)}
-        className="bg-white w-40 relative z-10 items-center justify-center flex   rounded-full h-40 border-[11px] border-red-600  mt-20 ml-20"
+        className="bg-white lg:w-40 w-32 h-32 relative z-10 items-center justify-center flex   rounded-full lg:h-40 border-[11px] border-red-600  mt-20 lg:ml-20 ml-28"
       >
         <Image className="" src={rock}></Image>
       </div>

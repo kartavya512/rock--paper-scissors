@@ -11,8 +11,8 @@ import { useState } from "react";
 
 export default function Home() {
   const [rules, setRules] = useState(false)
-  const [score,setScore]=useState(0)
-  if(score<0){
+  const [score, setScore] = useState(0)
+  if (score < 0) {
     setScore(0)
   }
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <div className="flex flex-col   items-center">
 
         <Score score={score}></Score>
-        <div className="absolute z-10 pt-40">
+        <div className="absolute z-10 lg:pt-40">
           {rules ?
             <div className=" bg-white p-2 rounded-lg">
               <div className="flex justify-between p-5">
@@ -31,11 +31,22 @@ export default function Home() {
                 <Image src={rule}></Image></div>
 
             </div> : ''}</div>
-        <div className="absolute z-0 pt-60"><Pick setScore={setScore} score={score}></Pick></div>
+        <div className="absolute z-0 pt-52 lg:pt-60"><Pick setScore={setScore} score={score}></Pick></div>
       </div>
-      <div className="flex justify-end  pr-40 pt-[28%]">
-        <button onClick={() => { setRules(true) }} className=" w-20 p-1 rounded-lg border border-white text-white">Rules</button>
+      <div className="flex justify-between lg:pl-0 pl-5 lg:pr-0 pr-5" >
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end  lg:pl-36 lg:pt-[28%] pt-[140%]">
+          <button onClick={() => { setScore(0) }} className=" w-20 lg:p-1 p-2 rounded-lg border border-white text-white">Reset</button>
+        </div>
+
+
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end  lg:pr-40 lg:pt-[28%] pt-[140%]">
+          <button onClick={() => { setRules(true) }} className=" w-20 lg:p-1 p-2 rounded-lg border border-white text-white">Rules</button>
+        </div>
+
+
       </div>
+
+
     </div>
   );
 }
